@@ -1,0 +1,209 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:gravity="center"
+    tools:context=".MainActivity">
+    <!-- Acıklama Satırı Denemesi -->
+
+
+    <!-- Ekmek Seçimi -->
+    <TextView
+        android:id="@+id/txt_ekmek"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Ekmek Seçiniz:"
+        android:textSize="14sp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.01"
+        />
+
+    <RadioGroup
+        android:id="@+id/radioGroupEkmek"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintTop_toBottomOf="@id/txt_ekmek"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <RadioButton android:id="@+id/radio_beyaz_ekmek"
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:text="Beyaz Ekmek"
+            android:textSize="14sp"/>
+        <RadioButton android:id="@+id/radio_kepekli_ekmek"
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:text="Kepekli Ekmek"
+            android:textSize="14sp"/>
+        <RadioButton android:id="@+id/radio_cavdar_ekmek"
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:text="Çavdar Ekmek"
+            android:textSize="14sp" />
+    </RadioGroup>
+
+    <!-- Köfte Seçimi -->
+    <TextView
+        android:id="@+id/txt_kofte"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Köfte Seçiniz:"
+        android:textSize="14sp"
+        app:layout_constraintTop_toBottomOf="@id/radioGroupEkmek"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.01"
+        />
+
+    <RadioGroup
+        android:id="@+id/radioGroupKofte"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintTop_toBottomOf="@id/txt_kofte"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <RadioButton android:id="@+id/radio_dana_kofte"
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:text="Dana Köfte"
+            android:textSize="14sp"/>
+        <RadioButton android:id="@+id/radio_tavuk_kofte"
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:text="Tavuk Köfte"
+            android:textSize="14sp"/>
+    </RadioGroup>
+
+    <!-- İç Malzemeler -->
+    <TextView
+        android:id="@+id/txt_malzeme"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="İç Malzemeler (En fazla 3)"
+        android:textSize="14sp"
+        app:layout_constraintTop_toBottomOf="@id/radioGroupKofte"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.01"/>
+
+    <CheckBox
+        android:id="@+id/check_marul"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Marul"
+        android:textSize="14sp"
+        app:layout_constraintTop_toBottomOf="@id/txt_malzeme"
+        app:layout_constraintStart_toStartOf="parent"/>
+
+    <CheckBox
+        android:id="@+id/check_domates"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Domates"
+        android:textSize="14sp"
+        app:layout_constraintTop_toBottomOf="@id/check_marul"
+        app:layout_constraintStart_toStartOf="parent"/>
+
+    <CheckBox
+        android:id="@+id/check_tursu"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Turşu"
+        android:textSize="14sp"
+        app:layout_constraintTop_toBottomOf="@id/check_domates"
+        app:layout_constraintStart_toStartOf="parent"/>
+
+    <CheckBox
+        android:id="@+id/check_peynir"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Peynir"
+        android:textSize="14sp"
+        app:layout_constraintTop_toBottomOf="@id/check_tursu"
+        app:layout_constraintStart_toStartOf="parent"/>
+
+    <CheckBox
+        android:id="@+id/check_sogan"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Soğan"
+        android:textSize="14sp"
+        app:layout_constraintTop_toBottomOf="@id/check_peynir"
+        app:layout_constraintStart_toStartOf="parent"/>
+
+    <!-- İçecek Seçimi -->
+    <TextView
+        android:id="@+id/txt_icecek"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="İçecek Seçiniz:"
+        android:textSize="14sp"
+        app:layout_constraintTop_toBottomOf="@id/check_sogan"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.01"/>
+
+    <RadioGroup
+        android:id="@+id/radioGroupIcecek"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintTop_toBottomOf="@id/txt_icecek"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <RadioButton android:id="@+id/radio_kola"
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:text="Kola"
+            android:textSize="14sp"/>
+        <RadioButton android:id="@+id/radio_su"
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:text="Su"
+            android:textSize="14sp"/>
+        <RadioButton android:id="@+id/radio_meyve_suyu"
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:text="Meyve Suyu"
+            android:textSize="14sp"/>
+    </RadioGroup>
+
+    <!-- Kaydet Butonu -->
+    <Button
+        android:id="@+id/btn_kaydet"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Kaydet"
+        app:layout_constraintBottom_toTopOf="@id/txt_toplam_fiyat"
+        app:layout_constraintStart_toStartOf="@id/txt_toplam_fiyat"
+        app:layout_constraintEnd_toEndOf="@id/txt_toplam_fiyat"
+        android:layout_marginTop="14sp"/>
+
+    <!-- Toplam Fiyat Bilgisi -->
+    <TextView
+        android:id="@+id/txt_toplam_fiyat"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Toplam Fiyat: 0 TL"
+        android:textSize="25sp"
+        android:textStyle="bold"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintVertical_bias="0.8"
+        android:layout_marginTop="16dp"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
